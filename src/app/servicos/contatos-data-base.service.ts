@@ -13,6 +13,8 @@ export class ContatosDataBaseService {
 
   setContato(novoContato: ContatoModel): void {
     this.meusContatos.push(novoContato);
+
+    //Notifica o componente pai sobre a emissão do evento
     this.enviarContato.emit(this.meusContatos);
   }
 
