@@ -1,7 +1,7 @@
-<h3 class="container col-6">
+<h3 class="container ">
   Dados do contato
 </h3>
-<div class="card container col-6">
+<div class="card container ">
   <form #formulario="ngForm" class="card-block" (ngSubmit)="enviarDados()" *ngIf="!enviado" >
       <div class="form-group" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
           <label for="nome">Nome</label>
@@ -39,7 +39,7 @@
   </form>
 </div>
 
-<div class="card card-block container col-6" *ngIf="enviado">
+<div class="card card-block container" *ngIf="enviado">
   <div>
       <h2>Dados do contato Enviado!</h2>
   </div>
