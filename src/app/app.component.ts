@@ -9,11 +9,12 @@ import { ContatoModel } from "./modelos/contato-model";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "Angular-CdC-Contact-List";
 
-  constructor(private dataBaseService: ContatosDataBaseService) {}
+  title = "Angular-CdC-Contact-List";
   contatoclicado: ContatoModel;
 
+  constructor(private dataBaseService: ContatosDataBaseService) {}
+  
   enviarDetalhe(id): void {
     this.contatoclicado = this.dataBaseService.getContato(id);
   }

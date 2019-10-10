@@ -8,6 +8,7 @@ import { ContatoModel } from "../modelos/contato-model";
   styleUrls: ["./dados-usuario.component.css"]
 })
 export class DadosUsuarioComponent implements OnInit {
+  
   enviado: boolean = false;
   _nome: string;
   _telefone: string;
