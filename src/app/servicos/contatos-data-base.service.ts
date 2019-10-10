@@ -1,8 +1,8 @@
-import { Injectable, EventEmitter } from "@angular/core";
-import { ContatoModel } from "../modelos/contato-model";
+import { Injectable, EventEmitter } from '@angular/core';
+import { ContatoModel } from '../modelos/contato-model';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class ContatosDataBaseService {
 
@@ -14,11 +14,11 @@ export class ContatosDataBaseService {
   setContato(novoContato: ContatoModel): void {
     this.meusContatos.push(novoContato);
 
-    //Notifica quem deu um .subscribe enviando "meusContatos[]"
+    // Notifica quem deu um .subscribe enviando 'meusContatos[]'
     this.enviarContato.emit(this.meusContatos);
   }
 
-  getContato(id: number):ContatoModel{
+  getContato(id: number): ContatoModel {
     let contato: ContatoModel;
     contato = this.meusContatos[id];
     return contato;
